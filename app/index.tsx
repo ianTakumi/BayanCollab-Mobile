@@ -12,13 +12,10 @@ export default function Index() {
 
   console.log(hasOnboarded);
   useEffect(() => {
-
-
-    // Small delay to ensure Redux Persist has rehydrated
     const timer = setTimeout(() => {
       if (hasOnboarded) {
         if (isAuthenticated) {
-          router.replace("/HomeScreen"); // Or your main app screen
+          router.replace("/HomeScreen");
         } else {
           router.replace("/LoginScreen");
         }
